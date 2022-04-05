@@ -6,15 +6,17 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  github-pages:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: ruby/setup-ruby@v1
-      with:
-        bundler-cache: true
-    - run: bundle exec jekyll build
-    - name: Deploy site
-      with:
-        build-dir: _site
-      uses:  NickSchimek/deploy_jamstack_action@main
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - uses: ruby/setup-ruby@v1
+      - uses: helaili/jekyll-action@2.3.1    # Choose any one of the Jekyll Actions
+        with:                                # Some relative inputs of your action
+          token: ${{ secrets.GITHUB_TOKEN }}
