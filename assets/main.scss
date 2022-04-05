@@ -3,3 +3,16 @@
 ---
 
 @import "minima";
+
+
+$primary-color: #8d8741;
+$secondary-color: #659DBD;
+$tertiary-color: #DAAD86;
+$quaternary-color: #BC986a;
+$quinary-color: #FBEEC1;
+
+@import "header";
+
+body{
+    background: $tertiary-color;
+}
