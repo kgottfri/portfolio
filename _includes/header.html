@@ -1,21 +1,29 @@
-<header class="sticky-nav-header">
+<header class="nav-header">
     <div class="nav-wrapper">
         <div class="container">
-            <a class="site-logo" rel="author" href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/images/logo.png' | absolute_url }}" alt="logo">
-            </a>
-        </div>
-
-        <div class="container">
-            <h1 class="nav-h1">
-                <a class="custom-site-title" rel="author" href="{{ '/' | relative_url }}">
-                    Kevin Gottfried
+            <div class="container">
+                <a class="site-logo" rel="author" href="{{ '/' | relative_url }}">
+                    <img src="{{ '/assets/images/logo.png' | absolute_url }}" alt="logo">
                 </a>
-            </h1>
+            </div>
+
+            <div class="container">
+                <h1 class="nav-h1">
+                    <a class="custom-site-title" rel="author" href="{{ '/' | relative_url }}">
+                        Kevin Gottfried
+                    </a>
+                </h1>
+            </div>
         </div>
 
         <div class="container social-nav-icons">
             <ul>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#skills">Skills & Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
                 <li>
                     <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
                         <img src="{{ '/assets/images/social_icons/linkedin.png' | absolute_url }}" alt="linkedin" />

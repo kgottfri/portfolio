@@ -9,10 +9,6 @@ $primary-color: #8d8741;
 $secondary-color: #659DBD;
 $tertiary-color: #DAAD86;
 $quaternary-color: #BC986a;
-$quinary-color: #FBEEC1;
+$quinary-color: #2a2a2a;
 
 @import "header";
-
-body{
-    background: $tertiary-color;
-}
