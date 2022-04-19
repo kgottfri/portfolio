@@ -5,4 +5,6 @@ contribution:
 tech: JavaScript, React, HTML, CSS
 organization: Freelance
 repo: https://github.com/kgottfri/Restaurant-Roulette
+link: https://github.com/kgottfri/Restaurant-Roulette
 order: 3
+---

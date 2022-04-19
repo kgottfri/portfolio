@@ -40,6 +40,13 @@ sass:
 collections:
   projects:
     sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
   
 # Exclude from processing.
 # The following items will not be processed, by default.
