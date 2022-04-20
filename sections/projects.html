@@ -2,20 +2,66 @@
     <div class="projects">
         <ul class="grid-container post-list">
             {% for project in site.projects %}
-            <h3>
-                <a href="{{ project.link | absolute_url}}" target="blank">{{ project.name }}</a>
-            </h3>
-            <div class="content">
-                <h4>Description</h4>
-                <p>{{ project.description }}</p>
+            <div class="project">
+                <h3>
+                    <a href="{{ project.link | absolute_url}}" target="blank">{{ project.name }}</a>
+                    <a href="{{project.repo | absolute_url}}" target="blank">
+                        <img src="{{ '/assets/images/social_icons/github.png' | absolute_url }}" alt="github"
+                            class="repo">
+                    </a>
+                </h3>
+                <div class="content">
+                    <h4>Description</h4>
+                    <p>{{ project.description }}</p>
+                </div>
+                <div class="content">
+                    <h4>Contribution </h4>
+                    <p>{{ project.contribution}}</p>
+                </div>
+                <div class="content">
+                    {% if project.javascript == "javascript" %}
+                    <img src="{{ '/assets/images/techs/javascript.png' | absolute_url}}" alt="JavaScript" class="tech">
+                    {% endif %}
+                    {% if project.react == "react" %}
+                    <img src="{{ '/assets/images/techs/react.png' | absolute_url}}" alt="react" class="tech">
+                    {% endif %}
+                    {% if project.ruby == "ruby" %}
+                    <img src="{{ '/assets/images/techs/ruby-on-rails.png' | absolute_url}}" alt="ruby" class="tech">
+                    {% endif %}
+                    {% if project.swift == "swift" %}
+                    <img src="{{ '/assets/images/techs/swift.png' | absolute_url}}" alt="swift" class="tech">
+                    {% endif %}
+                    {% if project.postgresql == "postgresql" %}
+                    <img src="{{ '/assets/images/techs/postgresql.png' | absolute_url}}" alt="postgresql" class="tech">
+                    {% endif %}
+                    {% if project.html == "html" %}
+                    <img src="{{ '/assets/images/techs/html.png' | absolute_url}}" alt="html" class="tech">
+                    {% endif %}
+                    {% if project.css == "css" %}
+                    <img src="{{ '/assets/images/techs/css3.png' | absolute_url}}" alt="css" class="tech">
+                    {% endif %}
+                    {% if project.sass == "sass" %}
+                    <img src="{{ '/assets/images/techs/sass.png' | absolute_url}}" alt="sass" class="tech">
+                    {% endif %}
+                    {% if project.php == "php" %}
+                    <img src="{{ '/assets/images/techs/php.png' | absolute_url}}" alt="php" class="tech">
+                    {% endif %}
+                    {% if project.jekyll == "jekyll" %}
+                    <img src="{{ '/assets/images/techs/jekyll.png' | absolute_url}}" alt="jekyll" class="tech">
+                    {% endif %}
+                    {% if project.babel == "babel" %}
+                    <img src="{{ '/assets/images/techs/babel.png' | absolute_url}}" alt="babel" class="tech">
+                    {% endif %}
+                    {% if project.nodejs == "nodejs" %}
+                    <img src="{{ '/assets/images/techs/nodejs.png' | absolute_url}}" alt="Node.JS" class="tech">
+                    {% endif %}
+
+
+
+
+
+                </div>
             </div>
-            <div class="content">
-                <h4>Contribution </h4>
-                <p>{{ project.contribution}}</p>
-            </div>
-            <a href="{{project.repo | absolute_url}}" target="blank">
-                <img src="{{ '/assets/images/social_icons/github.png' | absolute_url }}" alt="github" class="repo">
-            </a>
             {% endfor %}
         </ul>
     </div>
