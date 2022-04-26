@@ -3,6 +3,7 @@
 ---
 
 @import "minima";
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
 
 $primary-color: #8d8741;
@@ -12,3 +13,13 @@ $quaternary-color: #BC986a;
 $quinary-color: #2a2a2a;
 
 @import "header";
+@import "projects";
+
+.wrapper{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Dosis', sans-serif;
+    background: $quaternary-color;
+}

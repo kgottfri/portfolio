@@ -22,7 +22,7 @@ title: Kevin Gottfried
 email: kgott541@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Kevin Gottfried portfolio site
-baseurl: "/portfolio" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://kgottfri.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #social usernames
@@ -37,6 +37,17 @@ plugins:
 sass:
   sass_dir: assets/stylesheets
 
+collections:
+  projects:
+    sort_by: order
+  tech:
+
+defaults:
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
   
 # Exclude from processing.
 # The following items will not be processed, by default.
