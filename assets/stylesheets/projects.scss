@@ -16,9 +16,20 @@ h4{
 }
 .content{
     margin-left: 20px;
-    p{
+
+}
+    .text{
         margin-left: 15px;
         font-size: 20px;
+    }
+
+.language{
+    display: inline-grid;
+    align-content: center;
+    margin-right: 15px;
+    p{
+        margin: auto;
+        text-align: center;
     }
 }
 
@@ -34,5 +45,5 @@ h4{
 .tech{
     width: 40px;
     height: 40px;
-    margin-right: 15px;
+    margin: auto;
 }
