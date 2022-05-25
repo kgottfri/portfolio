@@ -38,9 +38,9 @@ sass:
   sass_dir: assets/stylesheets
 
 collections:
+  skills:
   projects:
     sort_by: order
-  tech:
 
 defaults:
   - scope:
