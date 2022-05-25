@@ -1,0 +1,115 @@
+<section id="projects">
+    {% include section_header.html content="Projects" %}
+    <div class="projects">
+        <ul class="grid-container post-list">
+            {% for project in site.projects %}
+            <div class="project">
+                <h3>
+                    <a href="{{ project.link | absolute_url}}" target="blank">{{ project.name }}</a>
+                    <a href="{{project.repo | absolute_url}}" target="blank">
+                        <img src="{{ '/assets/images/social_icons/github.png' | absolute_url }}" alt="github"
+                            class="repo">
+                    </a>
+                </h3>
+                <div class="content">
+                    <h4>Description</h4>
+                    <p class="text">{{ project.description }}</p>
+                </div>
+                <div class="content">
+                    <h4>Contribution </h4>
+                    <p class="text">{{ project.contribution}}</p>
+                </div>
+                <div class="content">
+                    <h4>Techs</h4>
+                    {% if project.javascript == "javascript" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/javascript.png' | absolute_url}}" alt="JavaScript"
+                            class="tech">
+                        <p>JavaScript</p>
+                    </div>
+                    {% endif %}
+                    {% if project.react == "react" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/react.png' | absolute_url}}" alt="react" class="tech">
+                        <p>React</p>
+                    </div>
+                    {% endif %}
+                    {% if project.ruby == "ruby" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/ruby.png' | absolute_url}}" alt="ruby" class="tech">
+                        <p>Ruby</p>
+                    </div>
+                    {% endif %}
+                    {% if project.rails == "rails" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/ruby-on-rails.png' | absolute_url}}" alt="Ruby on Rails"
+                            class="tech">
+                        <p>Ruby on Rails</p>
+                    </div>
+                    {% endif %}
+                    {% if project.swift == "swift" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/swift.png' | absolute_url}}" alt="swift" class="tech">
+                        <p>Swift</p>
+                    </div>
+                    {% endif %}
+                    {% if project.postgresql == "postgresql" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/postgresql.png' | absolute_url}}" alt="postgresql"
+                            class="tech">
+                        <p>PostgreSQL</p>
+                    </div>
+                    {% endif %}
+                    {% if project.html == "html" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/html.png' | absolute_url}}" alt="html" class="tech">
+                        <p>HTML</p>
+                    </div>
+                    {% endif %}
+                    {% if project.css == "css" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/css3.png' | absolute_url}}" alt="css" class="tech">
+                        <p>CSS</p>
+                    </div>
+                    {% endif %}
+                    {% if project.sass == "sass" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/sass.png' | absolute_url}}" alt="sass" class="tech">
+                        <p>Sass</p>
+                    </div>
+                    {% endif %}
+                    {% if project.php == "php" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/php.png' | absolute_url}}" alt="php" class="tech">
+                        <p>PHP</p>
+                    </div>
+                    {% endif %}
+                    {% if project.jekyll == "jekyll" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/jekyll.png' | absolute_url}}" alt="jekyll" class="tech">
+                        <p>Jekyll</p>
+                    </div>
+                    {% endif %}
+                    {% if project.babel == "babel" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/babel.png' | absolute_url}}" alt="babel" class="tech">
+                        <p>Babel</p>
+                    </div>
+                    {% endif %}
+                    {% if project.nodejs == "nodejs" %}
+                    <div class="language">
+                        <img src="{{ '/assets/images/techs/nodejs.png' | absolute_url}}" alt="Node.JS" class="tech">
+                        <p>Node.JS</p>
+                    </div>
+                    {% endif %}
+
+
+
+
+
+                </div>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

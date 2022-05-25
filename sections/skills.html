@@ -1,0 +1,10 @@
+<section id="skills">
+    <div class="skills">
+        {% include section_header.html content="Skills & Tools" %}
+        {% for image in site.static_files %}
+        {% if image.path contains 'images/techs' %}
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="techs" />
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
